@@ -1,6 +1,6 @@
 'use strict';
 
-var assessment = require('../lib/assessment.js');
+const assessment = require('../lib/diagnostic.js');
 
 describe('reduce', function() {
 
