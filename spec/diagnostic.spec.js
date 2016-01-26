@@ -53,24 +53,24 @@ describe('enumerable', function() {
   describe('find', function() {
 
     var withDuplicates = [{
-      name: 'first'
+      name: 'first',
     }, {
-      name: 'repeat'
+      name: 'repeat',
     }, {
-      name: 'third'
+      name: 'third',
     }, {
-      name: 'repeat'
+      name: 'repeat',
     }, {
-      name: 'fifth'
-    }, ];
+      name: 'fifth',
+    }, ]; // jscs:ignore
 
     it('returns correct object in array', function() {
-      expect(assessment.find(withDuplicates,
+      expect(assessment.first(withDuplicates,
         o => o.name === 'repeat')).toBe(withDuplicates[1]);
     });
 
     it('returns undefined for unmatched object', function() {
-      expect(assessment.find(withDuplicates,
+      expect(assessment.first(withDuplicates,
         o => o.name === 'fourth')).toBeUndefined();
     });
 
